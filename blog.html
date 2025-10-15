@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Blog — Francis Taveras</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="about.html">Acerca de mí</a>
+<a href="portfolio.html">Portafolio</a>
+<a href="blog.html" class="active">Blog</a>
+<a href="contact.html">Contacto</a>
+</nav>
+</header>
+<main>
+<section class="blog">
+<div class="gif-container">
+<img src="images/blog.gif" alt="GIF animado del blog" />
+</div>
+<h2>Reflexiones y aprendizajes</h2>
+<article>
+<h3>Cómo resolví mi primer bug</h3>
+<p>Aprendí a usar la consola del navegador y leer errores correctamente.</p>
+<a href="#">Leer más</a>
+</article>
+<article>
+<h3>Mi experiencia usando Flexbox</h3>
+<p>Comprender el eje principal y secundario fue clave.</p>
+<a href="#">Leer más</a>
+</article>
+</section>
+</main>
+
+
+<footer>
+<p>© <span id="year"></span>  Francis Taveras — Portafolio Personal.</p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

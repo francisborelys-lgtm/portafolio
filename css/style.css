@@ -1,0 +1,112 @@
+@charset "UTF-8";
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background: linear-gradient(180deg, #041c32, #0a2647);
+  color: #f0f9ff;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+header nav a {
+  color: #f0f9ff;
+  text-decoration: none;
+}
+header nav a.active {
+  color: #00c897;
+}
+header nav a:hover {
+  color: #2c74b3;
+}
+
+.hero, .about, .portfolio, .blog, .contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+.hero .gif-container, .about .gif-container, .portfolio .gif-container, .blog .gif-container, .contact .gif-container {
+  max-width: 400px;
+}
+.hero .gif-container img, .about .gif-container img, .portfolio .gif-container img, .blog .gif-container img, .contact .gif-container img {
+  width: 100%;
+  border-radius: 12px;
+}
+.hero .text, .about .text, .portfolio .text, .blog .text, .contact .text {
+  max-width: 500px;
+}
+.hero .text h1, .hero .text h2, .hero .text h3, .about .text h1, .about .text h2, .about .text h3, .portfolio .text h1, .portfolio .text h2, .portfolio .text h3, .blog .text h1, .blog .text h2, .blog .text h3, .contact .text h1, .contact .text h2, .contact .text h3 {
+  color: #00c897;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #2c74b3;
+}
+
+/* ======== SECCIÓN INTRODUCCIÓN ======== */
+/* ======== SECCIÓN INTRODUCCIÓN ======== */
+.introduccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 10% 80px 10%; /* más cerca del texto anterior */
+}
+
+.intro-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; /* más espacio entre los GIFs y el texto */
+  text-align: center;
+}
+
+.intro-texto {
+  max-width: 650px;
+}
+
+.intro-texto h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.intro-texto p {
+  font-size: 1.15em;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* ======== GIFS LATERALES ======== */
+.gif-lado {
+  width: 200px; /* tamaño más grande */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.gif-lado:hover {
+  transform: scale(1.05); /* efecto al pasar el mouse */
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .intro-contenido {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .gif-lado {
+    width: 120px; /* más pequeños en móvil */
+  }
+}/*# sourceMappingURL=style.css.map */

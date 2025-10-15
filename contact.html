@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contacto — Francis Taveras</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="about.html">Acerca de mí</a>
+<a href="portfolio.html">Portafolio</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html" class="active">Contacto</a>
+</nav>
+</header>
+
+
+<main>
+<section class="contact">
+<div class="gif-container">
+<img src="images/contact.gif" alt="GIF animado de contacto" />
+</div>
+<h2>Contáctame</h2>
+<form id="contactForm">
+<label for="name">Nombre</label>
+<input id="name" type="text" required />
+
+
+<label for="email">Email</label>
+<input id="email" type="email" required />
+
+
+<label for="message">Mensaje</label>
+<textarea id="message" rows="5" required></textarea>
+
+
+<button type="submit">Enviar</button>
+<p id="formMessage"></p>
+</form>
+</section>
+</main>
+
+
+<footer>
+<p>© <span id="year"></span>  Francis Taveras — Portafolio Personal.</p>
+</footer>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const form=document.getElementById('contactForm');
+const msg=document.getElementById('formMessage');
+form.addEventListener('submit',e=>{
+e.preventDefault();
+msg.textContent='Mensaje enviado correctamente (simulado).';
+form.reset();
+});
+</script>
+</body>
+</html>

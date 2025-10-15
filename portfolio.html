@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portafolio — Francis</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="about.html">Acerca de mí</a>
+<a href="portfolio.html" class="active">Portafolio</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contacto</a>
+</nav>
+</header>
+
+
+<main>
+<section class="portfolio">
+<div class="gif-container">
+<img src="images/portfolio.gif" alt="GIF de proyectos" />
+</div>
+<h2>Proyectos</h2>
+<div class="project-grid">
+<article>
+<img src="images/project1.png" alt="Proyecto 1" />
+<h3>Proyecto 1</h3>
+<p>Objetivo: Crear una landing responsiva con HTML y CSS.</p>
+<p>Tecnologías: HTML, CSS, JavaScript</p>
+<a href="#">Ver en vivo</a> | <a href="#">Código</a>
+</article>
+<article>
+<img src="images/project2.png" alt="Proyecto 2" />
+<h3>Proyecto 2</h3>
+<p>Objetivo: Aplicación interactiva.</p>
+<p>Tecnologías: HTML, CSS, JS</p>
+<a href="#">Ver en vivo</a> | <a href="#">Código</a>
+</article>
+</div>
+</section>
+</main>
+
+
+<footer>
+<p>© <span id="year"></span>  Francis Taveras — Portafolio Personal.</p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

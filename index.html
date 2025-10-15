@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Inicio — Francis Taveras</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="about.html">Acerca de mí</a>
+    <a href="portfolio.html">Portafolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contacto</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="img-yo">
+      <img src="/img/6ac4876d-d8ec-4e1b-bd3c-84e3720ab39e.jfif" alt="">
+    </div>
+
+    <div class="text">
+      <h1>Hola, soy Francis Taveras</h1>
+      <p>Desarrollador/a web en formación — construyo experiencias accesibles y modernas.</p>
+      <p class="quote">“Construir, aprender, iterar.”</p>
+    </div>
+
+    <div class="gif-container">
+      <img src="img/descarga (5).gif" alt="GIF animado de presentación" />
+    </div>
+  </section>
+
+  <!-- 🔹 Nueva sección de introducción -->
+  <section class="introduccion">
+  <div class="intro-contenido">
+    <img src="img/giphy_gif (500×432).gif" alt="Decoración izquierda" class="gif-lado gif-izq">
+    
+    <div class="intro-texto">
+      <h2>Un poco sobre mí</h2>
+      <p>
+        Soy un apasionado del desarrollo web, con interés en el diseño moderno, la accesibilidad 
+        y las experiencias digitales que conectan con las personas. Me gusta aprender constantemente 
+        y aplicar lo que descubro en nuevos proyectos.
+      </p>
+    </div>
+    
+    <img src="img/giphy_gif (500×375).gif" alt="Decoración derecha" class="gif-lado gif-der">
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Francis Taveras — Portafolio Personal.</p>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

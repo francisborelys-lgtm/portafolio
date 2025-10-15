@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>about — Francis Taveras</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header>
+<nav>
+<a href="index.html">Inicio</a>
+<a href="about.html" class="active">Acerca de mí</a>
+<a href="portfolio.html">Portafolio</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contacto</a>
+</nav>
+</header>
+
+
+<main>
+<section class="about">
+<div class="gif-container">
+<img src="images/about.gif" alt="GIF representativo de sobre mí" />
+</div>
+<div class="text">
+<h2>Sobre mí</h2>
+<p>Soy estudiante de desarrollo web con interés en interfaces limpias y accesibles. Me gusta aprender nuevas tecnologías y colaborar en proyectos creativos.</p>
+<h3>Habilidades Técnicas</h3>
+<ul>
+<li>HTML5 semántico</li>
+<li>CSS3 / SCSS / Responsive Design</li>
+<li>JavaScript (DOM, ES6)</li>
+<li>Git y GitHub</li>
+</ul>
+<h3>Habilidades Blandas</h3>
+<ul>
+<li>Comunicación</li>
+<li>Trabajo en equipo</li>
+<li>Resolución de problemas</li>
+</ul>
+</div>
+</section>
+</main>
+
+
+<footer>
+<p>© <span id="year"></span>  Francis Taveras — Portafolio Personal.</p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

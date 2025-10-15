@@ -1,0 +1,127 @@
+$green: #00c897;
+$blue: #0a2647;
+$light-blue: #2c74b3;
+$dark: #041c32;
+$white: #f0f9ff;
+
+
+body {
+font-family: 'Inter', sans-serif;
+margin: 0;
+background: linear-gradient(180deg, $dark, $blue);
+color: $white;
+}
+
+
+header {
+background: rgba(255, 255, 255, 0.05);
+padding: 1rem;
+nav {
+display: flex;
+justify-content: center;
+gap: 1rem;
+a {
+color: $white;
+text-decoration: none;
+&.active {
+color: $green;
+}
+&:hover {
+color: $light-blue;
+}
+}
+}
+}
+
+
+.hero, .about, .portfolio, .blog, .contact {
+display: flex;
+align-items: center;
+justify-content: space-around;
+flex-wrap: wrap;
+padding: 2rem;
+
+
+.gif-container {
+max-width: 400px;
+img {
+width: 100%;
+border-radius: 12px;
+}
+}
+
+
+.text {
+max-width: 500px;
+h1, h2, h3 {
+color: $green;
+}
+}
+}
+
+
+footer {
+text-align: center;
+padding: 1rem;
+background: rgba(255,255,255,0.05);
+color: $light-blue;
+}
+
+/* ======== SECCIÓN INTRODUCCIÓN ======== */
+/* ======== SECCIÓN INTRODUCCIÓN ======== */
+.introduccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 10% 80px 10%; /* más cerca del texto anterior */
+}
+
+.intro-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; /* más espacio entre los GIFs y el texto */
+  text-align: center;
+}
+
+.intro-texto {
+  max-width: 650px;
+}
+
+.intro-texto h2 {
+  font-size: 2.2em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.intro-texto p {
+  font-size: 1.15em;
+  line-height: 1.8;
+  color: #ffffff;
+}
+
+/* ======== GIFS LATERALES ======== */
+.gif-lado {
+  width: 200px; /* tamaño más grande */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.gif-lado:hover {
+  transform: scale(1.05); /* efecto al pasar el mouse */
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .intro-contenido {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .gif-lado {
+    width: 120px; /* más pequeños en móvil */
+  }
+}
+
