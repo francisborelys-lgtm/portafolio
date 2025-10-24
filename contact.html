@@ -1,61 +1,73 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Contacto — Francis Taveras</title>
-<link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-<header>
-<nav>
-<a href="index.html">Inicio</a>
-<a href="about.html">Acerca de mí</a>
-<a href="portfolio.html">Portafolio</a>
-<a href="blog.html">Blog</a>
-<a href="contact.html" class="active">Contacto</a>
-</nav>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="about.html">Acerca de mí</a>
+    <a href="portfolio.html">Portafolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html" class="active">Contacto</a>
+  </nav>
 </header>
-
 
 <main>
 <section class="contact">
-<div class="gif-container">
-<img src="images/contact.gif" alt="GIF animado de contacto" />
-</div>
-<h2>Contáctame</h2>
-<form id="contactForm">
-<label for="name">Nombre</label>
-<input id="name" type="text" required />
+  <div class="gif-container">
+    <img src="images/contact.gif" alt="GIF animado de contacto" />
+  </div>
 
+  <h2>Contáctame</h2>
+  <p class="intro">
+    ¿Tienes un proyecto, idea o colaboración en mente?  
+    No dudes en escribirme, estaré encantado de responderte.
+  </p>
 
-<label for="email">Email</label>
-<input id="email" type="email" required />
+  <!-- ✅ Formulario con tu endpoint de Formspree -->
+  <form action="https://formspree.io/f/xjkpggro" method="POST">
+    <label for="name">Nombre</label>
+    <input id="name" type="text" name="name" required />
 
+    <label for="email">Email</label>
+    <input id="email" type="email" name="email" required />
 
-<label for="message">Mensaje</label>
-<textarea id="message" rows="5" required></textarea>
+    <label for="message">Mensaje</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
 
+    <button type="submit">Enviar</button>
+  </form>
 
-<button type="submit">Enviar</button>
-<p id="formMessage"></p>
-</form>
+  <p id="formMessage"></p>
 </section>
 </main>
 
-
 <footer>
-<p>© <span id="year"></span>  Francis Taveras — Portafolio Personal.</p>
+  <p>© <span id="year"></span> Francis Taveras — Portafolio Personal.</p>
 </footer>
+
 <script>
+// 🔹 Actualiza el año automáticamente
 document.getElementById('year').textContent = new Date().getFullYear();
-const form=document.getElementById('contactForm');
-const msg=document.getElementById('formMessage');
-form.addEventListener('submit',e=>{
-e.preventDefault();
-msg.textContent='Mensaje enviado correctamente (simulado).';
-form.reset();
+
+// 🔹 Muestra un mensaje de confirmación cuando se envía el formulario
+const form = document.querySelector('form');
+const msg = document.getElementById('formMessage');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { Accept: 'application/json' }
+    });
+
+    if (response.ok) {
+      msg.textContent = '✅ ¡Tu mensaje fue enviado correctamente!';
+      form.reset();
+    } else {
+      msg.textContent = '❌ Hubo un problema al enviar el mensaje. Inténtalo nuevamente.';
+    }
+  } catch (error) {
+    msg.textContent = '⚠️ Error de conexión. Verifica tu red.';
+  }
 });
 </script>
-</body>
-</html>
