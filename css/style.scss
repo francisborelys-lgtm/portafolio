@@ -46,7 +46,8 @@ padding: 2rem;
 max-width: 400px;
 img {
 width: 100%;
-border-radius: 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 }
 
@@ -234,4 +235,73 @@ color: $light-blue;
   margin-top: 15px;
   color: green;
   font-weight: bold;
+}
+
+/* ----- Sección del portafolio ----- */
+.portfolio {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+/* ----- Contenedor horizontal de cada proyecto ----- */
+.project {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+/* ----- Imagen tamaño medio ----- */
+.project img {
+    width: 280px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* ----- Texto al lado de la imagen ----- */
+.project-text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.project-text h3 {
+    margin: 0 0 10px;
+    font-size: 1.6rem;
+}
+
+.project-text p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.project-text a {
+    color: #00aaff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-text a:hover {
+    text-decoration: underline;
+}
+
+/* ----- Responsivo para pantallas pequeñas ----- */
+@media (max-width: 700px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        width: 85%;
+    }
 }
