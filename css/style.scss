@@ -238,70 +238,77 @@ color: $light-blue;
 }
 
 /* ----- Sección del portafolio ----- */
+/* ====== SECCIÓN PORTAFOLIO ====== */
 .portfolio {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
+padding: 40px;
 }
+
 
 .portfolio h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.2rem;
+text-align: center;
+margin-bottom: 20px;
 }
 
-/* ----- Contenedor horizontal de cada proyecto ----- */
-.project {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
+
+/* ====== CONTENEDOR DE CARDS SCROLLEABLE ====== */
+.cards-container {
+display: flex;
+gap: 25px;
+overflow-x: auto;
+padding: 20px 10px;
+scroll-behavior: smooth;
 }
 
-/* ----- Imagen tamaño medio ----- */
-.project img {
-    width: 280px;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+
+.cards-container::-webkit-scrollbar {
+height: 10px;
 }
 
-/* ----- Texto al lado de la imagen ----- */
-.project-text {
-    flex: 1;
-    min-width: 260px;
+
+.cards-container::-webkit-scrollbar-thumb {
+background: #333;
+border-radius: 10px;
 }
 
-.project-text h3 {
-    margin: 0 0 10px;
-    font-size: 1.6rem;
+
+/* ====== CARD ====== */
+.card {
+flex: 0 0 280px;
+background: white;
+border-radius: 10px;
+padding: 15px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+transition: 0.3s;
 }
 
-.project-text p {
-    margin: 5px 0;
-    line-height: 1.5;
+
+.card:hover {
+transform: translateY(-5px);
+box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-.project-text a {
-    color: #00aaff;
-    font-weight: bold;
-    text-decoration: none;
+
+.card img {
+width: 100%;
+border-radius: 8px;
+margin-bottom: 10px;
 }
 
-.project-text a:hover {
-    text-decoration: underline;
+
+.card h3 {
+margin: 10px 0 5px;
 }
 
-/* ----- Responsivo para pantallas pequeñas ----- */
-@media (max-width: 700px) {
-    .project {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .project img {
-        width: 85%;
-    }
+.card p {
+color: #444;
+font-size: 14px;
+}
+
+
+/* ====== LINKS ====== */
+.links {
+display: flex;
+justify-content: space-between;
+margin-top: 10px;
 }
